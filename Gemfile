@@ -42,7 +42,6 @@ gem 'spring',        group: :development
 # ------------------------------------------------------------------------------
 # Testing
 group :test do
-  gem 'should_not'
   gem 'fuubar'
   # gem 'factory_girl_rails'
   # gem 'database_cleaner'
