@@ -16,6 +16,11 @@
 /tmp
 
 
+# ------------------------------------------------------------------------------
 # RVM
 .ruby-gemset
 .ruby-version
+
+# DB
+/db/schema.rb
+/db/structure.sql
