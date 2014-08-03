@@ -53,3 +53,13 @@ group :test, :development do
   gem 'spring-commands-rspec'
   # gem 'ffaker'
 end
+
+# Views
+gem 'slim-rails'
+gem 'simple_form', '~> 3.1.0.rc2'
+
+# Translations
+gem 'r18n-rails'
+
+
+
