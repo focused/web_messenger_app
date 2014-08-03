@@ -55,6 +55,8 @@ GEM
     minitest (5.4.0)
     multi_json (1.10.1)
     polyglot (0.3.5)
+    quiet_assets (1.0.3)
+      railties (>= 3.1, < 5.0)
     r18n-core (1.1.11)
     r18n-rails (1.1.11)
       r18n-rails-api (= 1.1.11)
@@ -152,6 +154,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   fuubar
   jquery-rails
+  quiet_assets
   r18n-rails
   rails (= 4.1.4)
   rspec-rails

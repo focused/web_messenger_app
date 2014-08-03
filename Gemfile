@@ -54,6 +54,9 @@ group :test, :development do
   # gem 'ffaker'
 end
 
+# Assets
+gem 'quiet_assets', group: 'development'
+
 # Views
 gem 'slim-rails'
 gem 'simple_form', '~> 3.1.0.rc2'
