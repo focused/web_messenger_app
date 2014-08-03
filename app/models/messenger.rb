@@ -3,3 +3,5 @@ module Messenger
     'messenger_'
   end
 end
+
+require './app/units/messenger/client'
