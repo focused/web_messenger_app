@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'chats' => 'chats#index'
+  get 'chats' => 'messenger/chats#index'
   namespace :messenger do
     resources :chats, only: %i(destroy)
   end
