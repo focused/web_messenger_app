@@ -1,11 +1,15 @@
 module Messenger
   class ChatsController < ApplicationController
+    include Helpers
+
     def index
       @chats = Chat.all
     end
 
     def show
-      @chat = Chat.find(params[:id]) if params[:id]
+      @chat = client.current_chat
+
+      redirect_to chats_url unless @chat
     end
 
     def destroy
