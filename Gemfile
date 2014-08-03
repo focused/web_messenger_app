@@ -53,6 +53,9 @@ group :test, :development do
   # gem 'ffaker'
 end
 
+# Utils
+gem 'awesome_print'
+
 # Assets
 gem 'quiet_assets', group: 'development'
 
