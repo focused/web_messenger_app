@@ -1,0 +1,16 @@
+h1 Listing chats
+
+table
+  thead
+    tr
+      th
+      th
+
+  tbody
+    - @chats.each do |chat|
+      tr
+        td = link_to 'Show', chat
+        td = link_to 'Destroy', chat, data: { confirm: 'Are you sure?' }, method: 'delete'
+
+br
+
