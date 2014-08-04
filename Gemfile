@@ -40,6 +40,9 @@ gem 'spring',        group: :development
 
 
 # ------------------------------------------------------------------------------
+# Servers
+gem 'thin'
+
 # Testing
 group :test do
   gem 'fuubar'
@@ -65,6 +68,9 @@ gem 'simple_form', '~> 3.1.0.rc2'
 
 # Translations
 gem 'r18n-rails'
+
+# Real time
+gem 'private_pub'
 
 
 
