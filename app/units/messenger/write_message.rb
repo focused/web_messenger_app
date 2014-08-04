@@ -1,9 +1,10 @@
 module Messenger
   module WriteMessage extend self
-    def call(chat, message)
+    def call(chat, author, message)
       define_method(:message) { message }
 
-      chat.messages << message ? message_item : message_form
+      message.author_id = author.id
+      (chat.messages << message) ? message_item : message_form
     end
 
     private

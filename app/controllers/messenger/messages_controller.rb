@@ -7,8 +7,10 @@ module Messenger
     def create
       @result = WriteMessage.(
         client.current_chat,
-        Message.new(message_params, author_id: current_user.id)
+        current_user,
+        Message.new(message_params)
       )
+      # Rails.logger.ap "========#{ @result.value.inspect }========"
       @result.success? || render(:new)
     end
 
