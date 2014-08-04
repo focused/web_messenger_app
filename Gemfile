@@ -43,7 +43,7 @@ gem 'spring',        group: :development
 # Testing
 group :test do
   gem 'fuubar'
-  # gem 'factory_girl_rails'
+  gem 'factory_girl_rails'
   # gem 'database_cleaner'
   # gem 'timecop'
 end
