@@ -1,0 +1,8 @@
+= t('.title')
+
+= simple_form_for @guest do |f|
+  .form-inputs
+    = f.input :name
+
+  .form-actions
+    = f.button :submit, t('.submit')

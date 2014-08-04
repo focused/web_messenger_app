@@ -1,0 +1,14 @@
+p
+  = t('.companions', names: @chat.companion_list)
+
+= link_to t('index.title', scope: 'messenger.chats'), chats_path
+
+br
+
+#message_list
+  = render @chat.messages
+
+br
+
+#new_message
+  = render 'messenger/messages/form', message: @chat.new_message

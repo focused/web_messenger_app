@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :guests, only: %i(show new create edit update destroy)
+
+  get 'chats' => 'messenger/chats#index'
+  namespace :messenger do
+    resources :chats, only: %i(new destroy)
+  end
+
+  root 'messenger/chats#show'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

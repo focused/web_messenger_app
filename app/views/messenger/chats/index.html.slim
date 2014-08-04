@@ -1,0 +1,16 @@
+h1 = t('.title')
+
+table
+  thead
+    tr
+      th
+      th
+
+  tbody
+    - @guests.each do |guest|
+      tr
+        td = link_to guest.name, new_messenger_chat_url(guest_id: guest.id)
+        /td = link_to 'Destroy', chat, data: { confirm: 'Are you sure?' }, method: 'delete'
+
+br
+

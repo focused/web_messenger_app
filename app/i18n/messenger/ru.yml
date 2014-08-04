@@ -1,0 +1,10 @@
+messenger:
+  chats:
+    index:
+      title: "Список чатов"
+    show:
+      companions: "Собеседники: %{names}"
+
+  messages:
+    form:
+      submit: "Отправить"

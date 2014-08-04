@@ -42,9 +42,8 @@ gem 'spring',        group: :development
 # ------------------------------------------------------------------------------
 # Testing
 group :test do
-  gem 'should_not'
   gem 'fuubar'
-  # gem 'factory_girl_rails'
+  gem 'factory_girl_rails'
   # gem 'database_cleaner'
   # gem 'timecop'
 end
@@ -53,6 +52,9 @@ group :test, :development do
   gem 'spring-commands-rspec'
   # gem 'ffaker'
 end
+
+# Utils
+gem 'awesome_print'
 
 # Assets
 gem 'quiet_assets', group: 'development'

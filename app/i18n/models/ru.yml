@@ -1,0 +1,6 @@
+activerecord:
+  attributes:
+    guest:
+      name: "Имя"
+    'messenger/message':
+        body: "Текст сообщения"

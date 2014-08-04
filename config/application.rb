@@ -34,9 +34,12 @@ module WebMessengerApp
       g.view_specs false
       g.helper_specs false
       g.controller_specs false
-      g.model_specs false
       g.routing_specs false
       g.request_specs false
     end
+
+    # config.autoload_paths += %W(
+    #   #{config.root}/app/units
+    # )
   end
 end

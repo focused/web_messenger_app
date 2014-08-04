@@ -1,0 +1,16 @@
+guests:
+  create:
+    welcome: "Добро пожаловать! Выберите собеседника из списка."
+  destroyed: "Вы покинули чат."
+  new:
+    submit: "Войти"
+    title: "Представьтесь пожалуйста."
+  statuses:
+    default: "Гость"
+  unnamed: "Безымянный"
+  updated: "Информация гостя обновлена."
+
+shared:
+  header:
+    user: "Пользователь: %{name}"
+
