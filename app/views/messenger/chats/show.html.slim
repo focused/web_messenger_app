@@ -1,2 +1,7 @@
+p
+  = t('.companions', names: @companions.map(&:name).join(', '))
 
-= link_to 'Back', chats_path
+= link_to t('index.title', scope: 'messenger.chats'), chats_path
+
+
+

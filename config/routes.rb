@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'chats' => 'messenger/chats#index'
   namespace :messenger do
-    resources :chats, only: %i(destroy)
+    resources :chats, only: %i(new destroy)
   end
 
   root 'messenger/chats#show'

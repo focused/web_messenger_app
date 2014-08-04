@@ -4,4 +4,4 @@ module Messenger
   end
 end
 
-require './app/units/messenger/client'
+require './app/units/messenger'

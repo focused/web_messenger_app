@@ -1,4 +1,4 @@
-h1 Listing chats
+h1 = t('.title')
 
 table
   thead
@@ -9,8 +9,8 @@ table
   tbody
     - @chats.each do |chat|
       tr
-        td = link_to 'Show', chat
-        td = link_to 'Destroy', chat, data: { confirm: 'Are you sure?' }, method: 'delete'
+        td = link_to chat.name, new_messenger_chat_url(guest_id: chat.companion_id)
+        /td = link_to 'Destroy', chat, data: { confirm: 'Are you sure?' }, method: 'delete'
 
 br
 
