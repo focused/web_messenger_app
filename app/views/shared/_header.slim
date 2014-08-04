@@ -1,4 +1,27 @@
-p
-  = t('.user', name: current_user.name)
-  '
-  = current_user.status
+.navbar-fixed-top
+  nav.navbar.navbar-default.navbar-inverse.navbar-static-top role="navigation"
+    .container
+      .navbar-header
+        = link_to t('app.name'), root_url, class: 'navbar-brand'
+
+      - if signed_in?
+        ul.nav.navbar-nav
+          li
+            = link_to t('index.title', scope: 'messenger.chats'), chats_path
+
+        ul.nav.navbar-nav.navbar-right
+          li
+            p.navbar-text
+              = t('.user', name: current_user.name)
+              '
+              = current_user.status
+          li
+            = link_to current_user, method: 'delete' do
+              = t('.sign_out')
+              '
+              span.glyphicon.glyphicon-log-out
+
+
+
+
+
