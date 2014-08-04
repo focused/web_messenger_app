@@ -2,15 +2,27 @@ module Messenger
   class GuestChat
     extend CallableValue
 
-    attr_reader :companion
-    delegate :name, to: :companion
+    attr_reader :model, :current_user
 
-    def initialize(remote_guest)
-      @companion = remote_guest
+    def initialize(chat, current_user)
+      @model = chat
+      @current_user = current_user
     end
 
-    def companion_id
-      companion.id
+    def companions
+      model.companions(current_user).map(&GuestRole)
+    end
+
+    def companion_list
+      companions.map(&:name).join(', ')
+    end
+
+    def new_message
+      @new_message ||= Message.new
+    end
+
+    def messages
+      model.messages.map(&ChatMessageRole)
     end
   end
 end

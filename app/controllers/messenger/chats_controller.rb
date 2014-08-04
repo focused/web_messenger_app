@@ -3,18 +3,17 @@ module Messenger
     include Helpers
 
     def index
-      @chats = Guest.all.map(&GuestChat)
+      @guests = Guest.except_one(current_user)
     end
 
     def show
-      @chat = client.current_chat
-      @companions = @chat.companions(current_user).map(&GuestRole)
+      redirect_to(chats_url) and return unless client.current_chat?
 
-      redirect_to chats_url unless @chat
+      @chat = GuestChat.new(client.current_chat, current_user)
     end
 
     def new
-      @chat = Messenger::OpenChat.(current_user, Guest.find(params[:guest_id]))
+      @chat = OpenChat.(current_user, Guest.find(params[:guest_id]))
       set_client last_chat_id: @chat.id
 
       redirect_to root_url

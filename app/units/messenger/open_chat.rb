@@ -1,7 +1,7 @@
 module Messenger
   module OpenChat extend self
-    def call(*people)
-      define_method(:people) { people }
+    def call(*two_people)
+      define_method(:people) { two_people }
 
       ensure_people(chat = ensure_chat) && chat
     end
@@ -9,7 +9,15 @@ module Messenger
     private
 
     def ensure_chat
-      Chat.present_for_some(*people).first_or_create
+      Chat.where(id: shared_id).first_or_create
+    end
+
+    def shared_id
+      people.map(&get_chat_ids).reduce(:&).first
+    end
+
+    def get_chat_ids
+      -> person { Chat.actual_for(person).pluck(:id) }
     end
 
     def ensure_people(chat)
