@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :guests, only: %i(show new create edit update destroy)
 
   get 'chats' => 'messenger/chats#index'
   namespace :messenger do
