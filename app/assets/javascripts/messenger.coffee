@@ -8,12 +8,14 @@ $ ->
       error: (data) ->
         return false
 
+typingTimer = null
 
 window.App ||=
   runTypingStatus: (author) ->
     $('#typing_status strong').text(author)
     $('#typing_status .inner').show()
-    setTimeout ->
+    clearTimeout(typingTimer) if typingTimer?
+    typingTimer = setTimeout ->
         $('#typing_status .inner').hide()
       , 3000
 
