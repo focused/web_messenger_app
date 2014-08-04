@@ -25,7 +25,9 @@ Features
 TODO
 -----------------
 
-1. Refactor Ruby
-2. Refactor JS with AngularJS
-3. Allow chat room to contain more than two people
-4. Make real user authentication system (now only temporarily guests and chats)
+1. Improve styles :)
+2. Write more specs
+3. Refactor Ruby
+4. Refactor JS, introduce AngularJS
+5. Allow chat room to contain more than two people
+6. Make real user authentication system (now only temporarily guests and chats)
