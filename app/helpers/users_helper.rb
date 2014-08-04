@@ -5,6 +5,10 @@ module UsersHelper
     @current_user ||= CurrentGuestFactory.(session)
   end
 
+  def signed_in?
+    current_user.authenticated?
+  end
+
   module CurrentGuestFactory extend self
     def call(state)
       GuestRole.new(find_guest(state[:current_guest_id]) || Guest.new)
