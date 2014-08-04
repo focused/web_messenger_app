@@ -1,0 +1,6 @@
+messenger:
+  chats:
+    index:
+      title: "Список чатов"
+    show:
+      companions: "Собеседники: %{names}"
