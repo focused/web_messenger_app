@@ -1,13 +1,19 @@
 require 'spec_helper'
 
 module Messenger
-  describe Client do
-    StubChatData = Struct.new(:attributes) do
-      def self.find_by(opts)
-        (5..10).include?(opts[:id]) ? new(id: opts[:id]) : nil
-      end
+  StubChatData = Struct.new(:attributes) do
+    def self.find_by(opts)
+      persisted?(opts[:id]) ? new(id: opts[:id]) : nil
     end
 
+    class << self
+      private def persisted?(id)
+        (5..10).include?(id)
+      end
+    end
+  end
+
+  describe Client do
     describe '#initialize' do
       it "fails without required param 'state'" do
         expect { Client.new }.to raise_error ArgumentError
