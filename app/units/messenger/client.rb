@@ -10,5 +10,6 @@ module Messenger
     def current_chat
       @current_chat ||= data_class.find_by(id: state[:last_chat_id])
     end
+    alias :current_chat? :current_chat
   end
 end
