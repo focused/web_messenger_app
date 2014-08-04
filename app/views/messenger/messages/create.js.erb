@@ -1,1 +1,4 @@
-$('#message_list').append('<%= escape_javascript render @result.value %>')
+<% publish_to "/chats/#{@result.value.chat_id}" do %>
+  $('#message_list').append('<%= escape_javascript render @result.value %>')
+  $("#new_message_container form")[0].reset()
+<% end %>

@@ -3,6 +3,7 @@ module Messenger
     extend CallableValue
 
     attr_reader :model, :current_user
+    delegate :id, to: :model
 
     def initialize(chat, current_user)
       @model = chat

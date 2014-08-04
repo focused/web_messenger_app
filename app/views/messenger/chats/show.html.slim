@@ -10,5 +10,7 @@ br
 
 br
 
-#new_message
+#new_message_container
   = render 'messenger/messages/form', message: @chat.new_message
+
+= subscribe_to "/chats/#{@chat.id}"
