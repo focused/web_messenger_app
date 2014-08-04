@@ -25,5 +25,13 @@ module Messenger
 
       redirect_to messenger_chats_url, notice: 'Chat was successfully destroyed.'
     end
+
+    def type
+      PrivatePub.publish_to(
+        "/chats/#{client.current_chat.id}",
+        "App.runTypingStatus('#{current_user.name}')"
+      )
+      render nothing: true
+    end
   end
 end

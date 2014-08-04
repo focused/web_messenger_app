@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'chats' => 'messenger/chats#index'
   namespace :messenger do
-    resources :chats, only: %i(new destroy)
+    resources :chats, only: %i(new destroy) do
+      collection { get :type }
+    end
     resources :messages, only: %i(create)
   end
 

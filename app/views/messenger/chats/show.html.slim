@@ -10,7 +10,16 @@ br
 
 br
 
+#typing_status data-action-url=type_messenger_chats_url
+  .inner
+    strong
+    '
+    span = "печатает..."
+
+br
+
 #new_message_container
   = render 'messenger/messages/form', message: @chat.new_message
 
 = subscribe_to "/chats/#{@chat.id}"
+
