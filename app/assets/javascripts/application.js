@@ -14,7 +14,9 @@
 //= require jquery
 //= require jquery_ujs
 
+//= require bootstrap-custom
+
 //= require private_pub
 
-//= require messenger
+//= require_tree ./application
 
