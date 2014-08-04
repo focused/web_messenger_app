@@ -28,8 +28,9 @@ class GuestsController < ApplicationController
 
   def destroy
     @guest.destroy
+    reset_session
 
-    redirect_to root_url, notice: t('.destroyed')
+    redirect_to root_url, notice: t('.signed_out')
   end
 
   private

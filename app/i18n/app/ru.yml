@@ -1,16 +1,19 @@
 guests:
   create:
     welcome: "Добро пожаловать! Выберите собеседника из списка."
-  destroyed: "Вы покинули чат."
   new:
     submit: "Войти"
     title: "Представьтесь пожалуйста."
+  signed_out: "Вы покинули чат."
   statuses:
     default: "Гость"
   unnamed: "Безымянный"
   updated: "Информация гостя обновлена."
 
 shared:
+  footer:
+    copy: 'Simple web messenger application. Made by <a href="http://github.com/focused">Focused</a>.'
   header:
+    sign_out: "Выход"
     user: "Пользователь: %{name}"
 
