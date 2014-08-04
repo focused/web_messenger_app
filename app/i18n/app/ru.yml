@@ -1,10 +1,11 @@
 guests:
   create:
     welcome: "Добро пожаловать! Выберите собеседника из списка."
+  destroy:
+    signed_out: "Вы покинули чат."
   new:
     submit: "Войти"
-    title: "Представьтесь пожалуйста."
-  signed_out: "Вы покинули чат."
+    title: "Представьтесь пожалуйста"
   statuses:
     default: "Гость"
   unnamed: "Безымянный"
