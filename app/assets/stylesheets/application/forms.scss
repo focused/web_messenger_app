@@ -1,0 +1,11 @@
+form {
+  &.new_guest {
+    max-width: 500px;
+  }
+  &.new_messenger_message {
+    max-width: 650px;
+    textarea {
+      height: 80px;
+    }
+  }
+}

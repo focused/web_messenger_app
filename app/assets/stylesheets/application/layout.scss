@@ -1,0 +1,80 @@
+@import "bootstrap/variables";
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+code {
+  font-size: 80%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 90px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container {
+  max-width: 980px;
+}
+
+.lnk-danger {
+  color: $btn-danger-bg;
+  &:hover {
+    color: darken($btn-danger-border, 15%);
+  }
+}
+
+.navbar-fixed-top {
+  margin-bottom: 0;
+  min-height: 20px;
+  .navbar {
+    a {
+      color: #ccc;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: #ccc;
+      }
+      p a {
+        display: inline;
+        padding: 0;
+      }
+    }
+  }
+  // .navbar-text {
+  //   margin-top: 5px;
+  //   margin-bottom: 5px;
+  // }
+}
