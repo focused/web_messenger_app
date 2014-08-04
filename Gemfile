@@ -61,6 +61,7 @@ gem 'awesome_print'
 
 # Assets
 gem 'quiet_assets', group: 'development'
+gem 'bootstrap-sass', '~> 3.1.1'
 
 # Views
 gem 'slim-rails'
