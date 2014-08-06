@@ -8,15 +8,22 @@ $ ->
       error: (data) ->
         return false
 
-typingTimer = null
 
-window.App ||=
-  runTypingStatus: (author) ->
-    $('#typing_status strong').text(author)
-    $('#typing_status .inner').show()
+window.App ||= {
+  typingTimer: null
+}
 
-    clearTimeout(typingTimer) if typingTimer?
-    typingTimer = setTimeout ->
-        $('#typing_status .inner').hide()
-      , 3000
+App.currentUser = ->
+  $('body').data('currentUser')
+
+App.runTypingStatus = (author_id, author) ->
+  return false if parseInt(author_id) == App.currentUser().id
+
+  $('#typing_status strong').text(author)
+  $('#typing_status .inner').show()
+
+  clearTimeout(App.typingTimer) if App.typingTimer?
+  App.typingTimer = setTimeout ->
+      $('#typing_status .inner').hide()
+    , 3000
 

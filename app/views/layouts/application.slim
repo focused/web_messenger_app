@@ -23,7 +23,7 @@ html
     = csrf_meta_tags
     = yield :head
 
-  body
+  body data-current-user=current_user.to_json
     /- if current_user.authenticated?
     = render partial: 'shared/header'
 
