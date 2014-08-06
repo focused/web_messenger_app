@@ -4,7 +4,9 @@ messenger:
       title: "Список чатов"
     show:
       companions: "Собеседники: %{names}"
+      typing: "печатает..."
 
   messages:
     form:
+      message_key_hint: "Ctrl + Enter отправит сообщение"
       submit: "Отправить"

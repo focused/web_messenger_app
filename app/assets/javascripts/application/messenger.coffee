@@ -1,4 +1,7 @@
 $ ->
+  $('#new_message_container').on 'keypress', 'textarea', (e) ->
+    $(@).parents('form').submit() if e.ctrlKey && e.keyCode == 13
+
   $('#new_message_container').on 'keypress', 'textarea', ->
     $.ajax
       type: "GET",

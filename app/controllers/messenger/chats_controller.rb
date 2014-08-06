@@ -29,7 +29,7 @@ module Messenger
     def type
       PrivatePub.publish_to(
         "/chats/#{client.current_chat.id}",
-        "App.runTypingStatus('#{current_user.name}')"
+        "App.runTypingStatus('#{current_user.id}', '#{current_user.name}')"
       )
       render nothing: true
     end

@@ -2,7 +2,7 @@
   / = f.error_notification
 
   .form-inputs
-    = f.input :body
+    = f.input :body, hint: t('.message_key_hint')
 
   .form-actions
     = f.button :submit, t('.submit')
