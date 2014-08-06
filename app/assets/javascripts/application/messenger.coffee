@@ -1,5 +1,5 @@
 $ ->
-  $('#new_message_container form').on 'keypress', 'textarea', ->
+  $('#new_message_container').on 'keypress', 'textarea', ->
     $.ajax
       type: "GET",
       url: $('#typing_status').data('action-url'),
@@ -14,6 +14,7 @@ window.App ||=
   runTypingStatus: (author) ->
     $('#typing_status strong').text(author)
     $('#typing_status .inner').show()
+
     clearTimeout(typingTimer) if typingTimer?
     typingTimer = setTimeout ->
         $('#typing_status .inner').hide()

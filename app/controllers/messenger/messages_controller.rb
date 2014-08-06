@@ -10,7 +10,6 @@ module Messenger
         current_user,
         Message.new(message_params)
       )
-      # Rails.logger.ap "========#{ @result.value.inspect }========"
       @result.success? || render(:new)
     end
 
