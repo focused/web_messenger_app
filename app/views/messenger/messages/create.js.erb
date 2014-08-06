@@ -1,4 +1,9 @@
 <% publish_to "/chats/#{@result.value.chat_id}" do %>
   $('#message_list').append('<%= escape_javascript render @result.value %>')
-  $("#new_message_container form")[0].reset()
+
+  $form = $("#new_message_container form")
+  $form[0].reset()
+
+  $form.find(".has-error .help-block").remove()
+  $form.find(".has-error").removeClass('has-error')
 <% end %>
