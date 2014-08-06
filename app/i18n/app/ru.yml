@@ -5,7 +5,7 @@ guests:
     signed_out: "Вы покинули чат."
   new:
     submit: "Войти"
-    title: "Представьтесь пожалуйста"
+    title: "Представьтесь, пожалуйста"
   statuses:
     default: "Гость"
   unnamed: "Безымянный"
