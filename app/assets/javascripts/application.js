@@ -16,7 +16,5 @@
 
 //= require bootstrap-custom
 
-//= require private_pub
-
 //= require_tree ./application
 
