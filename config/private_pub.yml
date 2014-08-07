@@ -5,6 +5,6 @@ test:
   server: "http://localhost:9292/faye"
   secret_token: "secret"
 production:
-  server: "http://web-messenger.nil.lclients.ru/faye"
+  server: "http://web-messenger.nil.lclients.ru:9292/faye"
   secret_token: "aefb24491a686b2235e493878ced8813468d6ad8e3fe115fcce991e0374266ae"
   signature_expiration: 3600 # one hour
