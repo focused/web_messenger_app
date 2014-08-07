@@ -24,3 +24,8 @@
 # DB
 /db/schema.rb
 /db/structure.sql
+
+
+/config/deploy
+!/config/deploy/*_sample.yml
+/config/deploy.rb
