@@ -72,7 +72,7 @@ gem 'simple_form', '~> 3.1.0.rc2'
 gem 'r18n-rails'
 
 # Real time
-gem 'private_pub'
+gem 'private_pub'#, github: 'ryanb/private_pub', branch: 'master'
 
 
 
